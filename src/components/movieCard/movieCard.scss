@@ -1,0 +1,56 @@
+.movieCard {
+  margin: 1% 0;
+}
+
+.selected {
+  border: 3px solid var(--red);
+  transform: scale(1.05);
+}
+
+.movieCard img {
+  display: inline-block;
+  width: 15.61rem;
+  transition: all 0.2s ease;
+}
+
+.popUpContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+.popUpContainer.visible {
+  opacity: 1;
+}
+.popUp {
+  max-width: 100%;
+  height: 100%;
+  text-align: left;
+  background-image: url(../../screens/login-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  color: var(--white);
+  animation: popUp 0.3s ease-in-out;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 3%;
+
+  .popUp-wrapper {
+    padding: 5% 0;
+  }
+}
+
+@keyframes popUp {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
